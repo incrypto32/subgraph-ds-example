@@ -1,0 +1,24 @@
+specVersion: 1.3.0
+description: "Subgraph Composition v1"
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: subgraph
+    name: Contract
+    network: mainnet
+    source:
+      address: 'QmXZiV6S13ha6QXq4dmaM3TB4CHcDxBMvGexSNu9Kc28EH'
+      startBlock: 7450116
+    mapping:
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Gravatar
+      handlers:
+        - handler: handleDelegation
+          entity: Delegation
+        - handler: handleBlock
+          entity: Block
+        - handler: handleSig
+          entity: Sig
+      file: ./src/mapping.ts

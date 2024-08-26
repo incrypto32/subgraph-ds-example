@@ -1,0 +1,17 @@
+{
+  "name": "subgraph-data-sources",
+  "version": "0.1.0",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ incrypto32/debug-sg-ds",
+    "create-local": "graph create --node http://localhost:8020/ incrypto32/debug-sg-ds",
+    "remove-local": "graph remove --node http://localhost:8020/ incrypto32/debug-sg-ds",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://api.thegraph.com/ipfs incrypto32/debug-sg-ds",
+    "test": "graph test"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "0.79.0-alpha-20240711124603-49edf22",
+    "@graphprotocol/graph-ts": "0.31.0"
+  }
+}

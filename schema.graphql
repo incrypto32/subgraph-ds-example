@@ -1,0 +1,20 @@
+type MirrorDelegation @entity {
+  id: ID!
+  delegator: Bytes!
+  space: String!
+  delegate: Bytes!
+  timestamp: Int!
+}
+
+type MirrorBlock @entity {
+  id: ID!
+  number: BigInt!
+  timestamp: BigInt!
+}
+
+type MirrorSig @entity {
+  id: ID!
+  account: Bytes!
+  msgHash: String!
+  timestamp: BigInt!
+}
